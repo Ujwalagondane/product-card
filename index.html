@@ -4,7 +4,22 @@
     <title>Product-card</title>
     <link rel="stylesheet" href="style.css"/>
     <script>
+        let count=0;
 
+        function inc(){
+            count++;
+            document.getElementById("counter").innerHTML=count;
+        }
+
+        function reset(){
+            count=0;
+            document.getElementById("counter").innerHTML=count;
+        }
+
+        function dec(){
+            count--;
+            document.getElementById("counter").innerHTML=count;
+        }
     </script>
 </head>
 <body>
@@ -25,6 +40,29 @@
                 <p class="description1">Mixed pizza with beef, chilli and cheese</p>
                 <img src="./images/star.png" class="small-img3"/>
                 <span class="description2">4.8(958 Rating)</span>
+                <img src="./images/pizza-3000285__340.webp" class="main-img"/>
+            </div>
+            
+            <div class="btn-container">
+                <button class="btn">$19.02</button>
+                <div >
+                    <button class="btn2" onClick="inc()">+</button>
+                    <button class="btn2" id="counter"  onClick="reset()">0</button>
+                    <button  class="btn2" onClick="dec()">-</button>
+                </div>
+            </div>
+
+            <div>
+                <img src="./images/clock.png" class="icons"/><span class="icon-description">8 min</span>
+                <img src="./images/fork-spoon.png" class="icons"/><span class="icon-description">Easy</span>
+                <img src="./images/cal.png" class="icons"/><span class="icon-description">325 Kcal</span>
+            </div>
+            <div>
+                <h6 class="title-txt">About </h6>
+                <p class="txt">A combination of fresh vegeabales,beef, 
+                    &nbsp;  chilli and a soft spun-curd cheese similar<br/> 
+                     to Mozzarella made from cow's milk...
+                </p>
             </div>
         </div>
     </div>
